@@ -24,6 +24,11 @@ public String getMessage() {
     return message;
 }
 
+//custom method 
+public void init(){
+    System.out.println("Bean is going through init.");
+}
+
     public static void main( String[] args )
     {
 

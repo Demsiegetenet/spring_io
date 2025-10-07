@@ -6,7 +6,8 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Example bean definition -->
-    <bean id="app" class="com.revature.spring_io.App">
+    <bean id="app" class="com.revature.spring_io.App"
+    init-method="init" destroy-method="cleanup">
      <constructor-arg value="Hello from constructor!"/>
     </bean>
 
