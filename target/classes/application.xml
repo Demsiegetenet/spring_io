@@ -7,11 +7,11 @@
 
     <!-- Example bean definition -->
     <bean id="app" class="com.revature.spring_io.App">
-     <constructor-arg value="Hello, Spring!"/>
+     <constructor-arg value="Hello from constructor!"/>
     </bean>
 
     <bean id="app1" class="com.revature.spring_io.App">
-     <property name="message" value="Hello, Spring with Property!"/>
+     <property name="message" value="Hello from method!"/>
     </bean>
 
 </beans>

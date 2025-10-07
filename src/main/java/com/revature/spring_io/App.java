@@ -4,10 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
 private String message;
 
@@ -29,13 +26,18 @@ public String getMessage() {
 
     public static void main( String[] args )
     {
+
          ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
-         App obj = context.getBean("app",App.class);
+
+            // Get the bean using constructor injection
+            App obj = context.getBean("app",App.class);
             System.out.println(obj.message);
 
-             App obj1 = context.getBean("app1",App.class);
+            // Get the bean using setter injection
+            App obj1 = context.getBean("app1",App.class);
             System.out.println(obj1.getMessage());
 
+           // Close the context to release resources
           ((ConfigurableApplicationContext) context).close();
     }
 }
