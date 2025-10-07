@@ -6,13 +6,14 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Example bean definition -->
-    <bean id="app" class="com.revature.spring_io.App"
-    init-method="init" destroy-method="cleanup">
-     <constructor-arg value="Hello from constructor!"/>
+    <bean id="messageService" class="com.revature.spring_io.MessageService"
+     init-method="init">
+    
+     <constructor-arg value="Hello from spring Configuration!"/>
     </bean>
 
-    <bean id="app1" class="com.revature.spring_io.App">
-     <property name="message" value="Hello from method!"/>
+    <bean id="messageService2" class="com.revature.spring_io.MessageService">
+         <property name="message" value="Hello from method!"/>
     </bean>
 
 </beans>
